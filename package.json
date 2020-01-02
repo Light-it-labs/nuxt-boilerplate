@@ -1,0 +1,22 @@
+{
+  "name": "nuxt_base",
+  "version": "1.0.0",
+  "description": "My finest Nuxt.js project",
+  "author": "Juan Vargas",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.8.5",
+    "@nuxtjs/axios": "^5.9.0",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}

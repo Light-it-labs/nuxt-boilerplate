@@ -2,17 +2,17 @@
   <nav >
     <div class="container">
         <ul>
-          <li>
+          <li class="inline">
             <nuxt-link :to="{ name: 'login' }">
               Login
             </nuxt-link>
           </li>
-          <li>
+          <li class="inline">
             <nuxt-link :to="{ name: 'register' }">
               Register
             </nuxt-link>
           </li>
-          <li>
+          <li class="inline">
             <a @click.prevent="logout">
               Logout
             </a>

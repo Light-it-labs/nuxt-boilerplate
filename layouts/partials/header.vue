@@ -19,7 +19,7 @@
           </li>
           <template v-if="loggedIn === true">
             <li>
-              Welcome {{ user.user.name }}
+              Welcome {{ user.name }}
             </li>
           </template>
         </ul>

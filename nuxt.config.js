@@ -1,3 +1,6 @@
+import getRoutes from './utils/getRoutes.js';
+require('dotenv').config();
+
 export default {
   mode: 'universal',
 
@@ -28,16 +31,27 @@ export default {
 
   buildModules: [
     '@nuxtjs/tailwindcss',
+    ['@nuxtjs/dotenv', { path: './' }],
+    '@nuxtjs/sitemap'
   ],
 
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth',
-    '@nuxtjs/dotenv',
   ],
 
+  sitemap: {
+    routes() {
+      return getRoutes();
+    },
+    hostname: process.env.APP_URL,
+    path: '/sitemap.xml',
+    gzip: true,
+    generate: false,
+  },
+
   axios: {
-    baseURL: 'http://localhost:8000/api'
+    baseURL: process.env.API_URL
   },
 
   auth: {
@@ -54,6 +68,6 @@ export default {
 
   build: {
     extend (config, ctx) {
-    }
-  }
+    },
+  },
 }

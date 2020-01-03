@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Navbar />
+    <Header />
     <nuxt />
   </div>
 </template>
 
 <script>
-  import Navbar from './partials/navbar';
+  import Header from './partials/header';
 
   export default {
     components: {
-      Navbar
+      Header
     }
   }
 </script>

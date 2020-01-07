@@ -25,15 +25,12 @@
 
     methods: {
       login() {
-        this.$nuxt.$loading.start();
         this.$auth.loginWith('local', {
           data: {
             email: this.form.email,
             password: this.form.password
           },
-        }).then(() => {
-          this.$nuxt.$loading.finish();
-        });
+        }).then(() => { });
       }
     },
   }

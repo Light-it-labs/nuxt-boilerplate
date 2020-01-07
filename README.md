@@ -1,7 +1,5 @@
-# nuxt_base
-
-> My finest Nuxt.js project
-
+# Nuxt app Template
+Nuxt app base is a boilerplate Nuxt project. It follows the community best practices in terms of standards, security and maintainability, integrating a variety of testing and code quality tools.
 ## Build Setup
 
 ``` bash
@@ -18,5 +16,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

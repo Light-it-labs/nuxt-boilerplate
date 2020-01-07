@@ -32,6 +32,9 @@
     methods: {
       reset(){
         this.$axios.post('reset/' + this.token, this.form).then(({ data }) => {
+          if(data.success === true){
+            this.$router.push('/login');
+          }
           console.log(data);
         }).catch(ex => {
           console.log(ex);

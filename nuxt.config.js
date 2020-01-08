@@ -38,20 +38,21 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth',
+    '@nuxtjs/sentry',
   ],
 
   sitemap: {
     routes() {
       return getRoutes();
     },
-    hostname: process.env.APP_URL,
+    hostname: process.env.APP_URL || 'http://localhost:3000',
     path: '/sitemap.xml',
     gzip: true,
     generate: false,
   },
 
   axios: {
-    baseURL: process.env.API_URL
+    baseURL: process.env.API_URL || 'http://localhost:8000/api'
   },
 
   auth: {
@@ -64,6 +65,13 @@ export default {
         }
       }
     }
+  },
+
+  sentry: {
+    dsn: process.env.SENTRY_DSN || '',
+    config: {
+      disabled: process.env.SENTRY_DISABLED || true
+    },
   },
 
   build: {

@@ -1,5 +1,3 @@
-import axios from "../.nuxt/axios";
-
 export default async function getRoutes(){
   let routes = [];
 

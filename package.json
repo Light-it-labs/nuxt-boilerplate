@@ -9,7 +9,26 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "jest --updateSnapshot --verbose"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "testRegex": "/tests/.*\\.(ts|tsx|js)$",
+    "mapCoverage": true
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.8.5",
@@ -18,10 +37,17 @@
     "@nuxtjs/sentry": "^3.0.1",
     "@nuxtjs/sitemap": "^2.0.1",
     "@types/nuxtjs__auth": "^4.8.3",
+    "@types/jest": "^21.1.4",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.5.5",
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "jest": "^21.2.1",
+    "jest-serializer-vue": "^0.2.0",
+    "jest-vue": "^0.8.1",
+    "jest-vue-preprocessor": "^1.3.0",
+    "ts-jest": "^21.1.3",
+    "vue-test-utils": "^1.0.0-beta.11"
   }
 }

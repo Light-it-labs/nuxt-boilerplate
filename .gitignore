@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Jest snapshots
+tests/pages/__snapshots__
+tests/components/__snapshots__
+

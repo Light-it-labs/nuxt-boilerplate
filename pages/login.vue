@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="login">
         <label for="email">Email</label>
-        <input id="email" v-model="form.email" type="email" class="form-control" required autofocus>
+        <input id="email" v-model="form.email" type="email" required>
 
         <label for="password">Password</label>
         <input id="password" v-model="form.password" type="password" required>
@@ -12,19 +12,21 @@
   </form>
 </template>
 
-<script>
-  export default {
+<script lang="ts">
+  import Vue from 'vue';
+
+  export default Vue.extend({
     data(){
       return {
         form: {
-          email: '',
-          password: ''
+          email: <string> '',
+          password: <string> ''
         }
       }
     },
 
     methods: {
-      login() {
+      login(): void {
         this.$auth.loginWith('local', {
           data: {
             email: this.form.email,
@@ -33,5 +35,5 @@
         }).then(() => { });
       }
     },
-  }
+  })
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div>
-    Nuxt App Boilerplate
+    <span>Password was reset successfully</span>
+    <nuxt-link :to="{ name: 'login' }">Login</nuxt-link>
   </div>
 </template>
 
@@ -9,5 +10,5 @@
 
   export default Vue.extend({
 
-  })
+  });
 </script>

@@ -12,31 +12,35 @@
   </form>
 </template>
 
-<script>
-  export default {
+<script lang="ts">
+  import Vue from 'vue';
 
-    data(){
+  export default Vue.extend({
+    data() {
       return {
         form: {
-          password: '',
-          confirm_password: ''
+          password: <string> '',
+          confirm_password: <string> ''
         },
-        token: ''
+        token: <string> ''
       }
     },
 
-    created(){
+    created(): void {
       this.token = this.$route.params.token;
     },
 
     methods: {
-      reset(){
-        this.$axios.post('reset/' + this.token, this.form).then(({ data }) => {
-          console.log(data);
-        }).catch(ex => {
+      async reset(): Promise<any> {
+        try {
+          let { data } = await this.$axios.post('reset/' + this.token, this.form);
+          if(data.success === true){
+            this.$router.push('/password/reset/success');
+          }
+        } catch(ex) {
           console.log(ex);
-        }).finally();
+        }
       }
     }
-  }
+  })
 </script>

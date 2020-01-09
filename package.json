@@ -2,6 +2,7 @@
   "name": "nuxt_base",
   "version": "1.0.0",
   "description": "My finest Nuxt.js project",
+  "types": "vue-shim.d.ts",
   "author": "Juan Vargas",
   "private": true,
   "scripts": {
@@ -16,9 +17,11 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/sentry": "^3.0.1",
     "@nuxtjs/sitemap": "^2.0.1",
+    "@types/nuxtjs__auth": "^4.8.3",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.5.5",
     "@nuxtjs/tailwindcss": "^1.0.0"
   }
 }

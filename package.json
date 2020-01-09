@@ -2,6 +2,7 @@
   "name": "nuxt_base",
   "version": "1.0.0",
   "description": "My finest Nuxt.js project",
+  "types": "vue-shim.d.ts",
   "author": "Juan Vargas",
   "private": true,
   "scripts": {
@@ -19,6 +20,7 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.5.5",
     "@nuxtjs/tailwindcss": "^1.0.0"
   }
 }

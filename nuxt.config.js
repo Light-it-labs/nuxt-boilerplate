@@ -30,6 +30,7 @@ export default {
   ],
 
   buildModules: [
+    '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     ['@nuxtjs/dotenv', { path: './' }],
     '@nuxtjs/sitemap'

@@ -18,31 +18,37 @@
   </form>
 </template>
 
-<script>
-  export default {
+<script lang="ts">
+  import Vue from 'vue';
+
+  export default Vue.extend({
     data(){
       return {
         form: {
-          name: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
+          name: <string> '',
+          email: <string> '',
+          password: <string> '',
+          confirmPassword: <string> '',
         }
       }
     },
 
     methods: {
-      register(){
-        this.$axios.post('register', this.form).then(response => {
-          if(response.data.success === true)
-            this.$auth.loginWith('local', {
+      async register(): Promise<any> {
+        try {
+          let { data } = await this.$axios.post('register', this.form);
+          if(data.success === true){
+            await this.$auth.loginWith('local', {
               data: {
                 email: this.form.email,
                 password: this.form.password
               }
             });
-        });
+          }
+        } catch(ex) {
+          console.log(ex);
+        }
       }
     }
-  }
+  })
 </script>

@@ -3,24 +3,26 @@
     <nav>
       <div class="container">
           <ul>
-            <li class="inline">
-              <nuxt-link :to="{ name: 'login' }">
-                Login
-              </nuxt-link>
-            </li>
-            <li class="inline">
-              <nuxt-link :to="{ name: 'register' }">
-                Register
-              </nuxt-link>
-            </li>
-            <li class="inline">
-              <a @click.prevent="logout">
-                Logout
-              </a>
-            </li>
-            <template v-if="loggedIn === true">
-              <li>
+            <template v-if="loggedIn === false">
+              <li class="inline">
+                <nuxt-link :to="{ name: 'login' }">
+                  Login
+                </nuxt-link>
+              </li>
+              <li class="inline">
+                <nuxt-link :to="{ name: 'register' }">
+                  Register
+                </nuxt-link>
+              </li>
+            </template>
+            <template v-else>
+              <li class="inline">
                 Welcome {{ user.name }}
+              </li>
+              <li class="inline">
+                <a href="" @click.prevent="logout">
+                  Logout
+                </a>
               </li>
             </template>
           </ul>
@@ -29,12 +31,13 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from 'vue';
   import { mapState } from 'vuex';
 
-  export default {
+  export default Vue.extend({
     methods: {
-      logout(){
+      logout(): void {
         this.$auth.logout();
       }
     },
@@ -42,5 +45,5 @@
     computed: {
       ...mapState('auth', ['loggedIn', 'user'])
     }
-  }
+  })
 </script>

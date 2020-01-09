@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-
+  <div>
+    Nuxt App Boilerplate
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import Vue from 'vue';
 
-export default {
-  components: {
-  }
-}
+  export default Vue.extend({
+
+  })
 </script>

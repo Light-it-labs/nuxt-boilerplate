@@ -22,7 +22,7 @@
     ],
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
-      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue"
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     },
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
@@ -45,9 +45,9 @@
     "@nuxtjs/tailwindcss": "^1.0.0",
     "jest": "^21.2.1",
     "jest-serializer-vue": "^0.2.0",
-    "jest-vue": "^0.8.1",
     "jest-vue-preprocessor": "^1.3.0",
     "ts-jest": "^21.1.3",
+    "vue-jest": "^3.0.5",
     "vue-test-utils": "^1.0.0-beta.11"
   }
 }

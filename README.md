@@ -13,15 +13,15 @@ Nuxt app base is a boilerplate Nuxt project. It follows the community best pract
 
 ``` bash
 # install dependencies
-$ npm run install
+$ yarn run install
 
 # serve for development with hot reload at localhost:3000
-$ npm run dev
+$ yarn run dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ yarn run build
+$ yarn run start
 
 # generate static project
-$ npm run generate
-```
+$ yarn run generate
+``` 

@@ -12,16 +12,19 @@ Nuxt template base is a boilerplate Nuxt project. It follows the community best 
 ## Build Setup
 
 ``` bash
+# create .env configuration file
+$ cp .env.example .env
+
 # install dependencies
-$ yarn run install
+$ npm install
 
 # serve for development with hot reload at localhost:3000
-$ yarn run dev
+$ npm run dev
 
 # build for production and launch server
-$ yarn run build
-$ yarn run start
+$ npm run build
+$ npm run start
 
 # generate static project
-$ yarn run generate
+$ npm run generate
 ``` 

@@ -1,5 +1,5 @@
-# Nuxt app Template
-Nuxt app base is a boilerplate Nuxt project. It follows the community best practices in terms of standards, security and maintainability, integrating a variety of testing and code quality tools.
+# Nuxt Template
+Nuxt template base is a boilerplate Nuxt project. It follows the community best practices in terms of standards, security and maintainability, integrating a variety of testing and code quality tools.
 
 ## Installed packages
 - [@nuxt/auth](https://auth.nuxtjs.org/) for users authentication.

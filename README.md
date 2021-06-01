@@ -16,17 +16,17 @@ Nuxt template base is a boilerplate Nuxt project. It follows the community best 
 $ cp .env.example .env
 
 # install dependencies
-$ npm install
+$ yarn install
 
 # serve for development with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ yarn run build
+$ yarn run start
 
 # generate static project
-$ npm run generate
+$ yarn run generate
 ``` 
 
 ## About Lightit
